@@ -5,7 +5,7 @@ import { Zap, Moon, Sun, ChevronDown, Check, Github } from 'lucide-react';
 import { TariffCategory, TARIFF_CATEGORIES } from '../data/tariffs';
 
 // Set your GitHub repository URL here when ready
-const GITHUB_REPO_URL = '';
+const GITHUB_REPO_URL = 'https://github.com/sarathy-cloud/TNEB-Tariff-Calculator';
 
 interface HeaderProps {
   darkMode: boolean;
