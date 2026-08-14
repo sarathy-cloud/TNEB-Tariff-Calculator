@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure tabular numbers for crisp aligned numbers */
+.font-mono {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Glassmorphism card utilities */
+.glass-card {
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(216, 213, 208, 0.6);
+}
+
+.dark .glass-card {
+  background-color: rgba(31, 31, 30, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(51, 51, 48, 0.6);
+}
+
+.glass-panel {
+  background-color: rgba(239, 236, 230, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.dark .glass-panel {
+  background-color: rgba(38, 38, 36, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Custom styled Range Slider */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: 9999px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -6px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #F97316;
+  border: 3px solid #FFFFFF;
+  box-shadow: 0 0 10px rgba(249, 115, 22, 0.4);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.dark input[type="range"]::-webkit-slider-thumb {
+  border-color: #1F1F1E;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 15px rgba(249, 115, 22, 0.6);
+}
+
+/* Chrome, Safari, Edge, Opera remove number input arrows for clean UI */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox remove number input arrows */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Custom smooth transitions */
+* {
+  transition-property: background-color, border-color, color, fill, stroke, transform, opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
