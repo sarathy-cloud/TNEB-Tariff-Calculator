@@ -1,4 +1,8 @@
+![TNEB Tariff Calculator](docs/screenshots/cover.png)
+
+
 # ⚡ TNEB Electricity Bill Calculator
+
 
 > A modern, interactive web application to calculate Tamil Nadu Electricity Board (TANGEDCO) electricity bills, visualize slab-wise tariff progression, and understand energy costs.
 
